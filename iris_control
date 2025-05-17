@@ -219,6 +219,7 @@ EOF
 
   echo "Creating redoid docker container... It will take a few minutes."
   sudo docker run -itd --privileged --name redroid \
+      --restart always \
       -v ~/data:/data \
       -p 5555:5555 \
       -p 3000:3000 \
